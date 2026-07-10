@@ -9,14 +9,7 @@ x-airflow-common: &airflow-common
     AIRFLOW__CORE__FERNET_KEY: ${AIRFLOW__CORE__FERNET_KEY}
     AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: ${AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION}
   volumes:
-    - ./dags:/opt/airflow/dags
-    - ./scripts:/opt/airflow/
-    - ./sql:/opt/airflow/sql
-    - ./dbt_olist:/opt/airflow/dbt_olist
-    - ./data:/opt/airflow/data
-    - ./warehouse:/opt/airflow/warehouse
-    - ./logs:/opt/airflow/logs
-    - ./config:/opt/airflow/config
+    - ./:/opt/airflow
     
   user: "${AIRFLOW_UID:-50000}:0"
   depends_on:
