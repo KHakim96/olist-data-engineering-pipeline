@@ -1,0 +1,59 @@
+version: 2
+
+models:
+
+  - name: int_customer_orders
+    description: "Customer and order information joined into a reusable business model."
+
+    columns:
+      - name: order_id
+        description: "Unique order identifier."
+        tests:
+          - not_null
+          - unique
+
+      - name: customer_id
+        description: "Customer that placed the order."
+        tests:
+          - not_null
+
+  - name: int_orders
+    description: "Clean order timeline."
+
+    columns:
+      - name: order_id
+        tests:
+          - not_null
+          - unique
+
+  - name: int_order_items
+    description: "Order items enriched with product and seller information."
+
+  - name: int_payment_summary
+    description: "Payment summary aggregated by order."
+
+    columns:
+      - name: order_id
+        tests:
+          - not_null
+          - unique
+
+  - name: int_delivery_metrics
+    description: "Delivery duration metrics for each order."
+
+  - name: int_product_sales
+    description: "Aggregated sales metrics for each product."
+
+    columns:
+      - name: product_id
+        tests:
+          - not_null
+          - unique
+
+  - name: int_review_metrics
+    description: "Review metrics by order."
+
+    columns:
+      - name: order_id
+        tests:
+          - not_null

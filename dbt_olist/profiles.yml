@@ -1,0 +1,11 @@
+olist:
+  target: dev
+
+  outputs:
+
+    dev:
+      type: duckdb
+
+      path: /opt/airflow/warehouse/olist.duckdb
+
+      threads: 4

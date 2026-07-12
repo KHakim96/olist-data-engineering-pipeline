@@ -1,0 +1,66 @@
+version: 2
+
+models:
+
+  - name: stg_category_translation
+    description: "Staging model for product category translations."
+
+  - name: stg_customers
+    description: "Staging model for customer information."
+
+    columns:
+      - name: customer_id
+        description: "Unique identifier for each customer."
+        tests:
+          - not_null
+          - unique
+
+      - name: customer_unique_id
+        description: "Unique identifier representing the actual customer."
+
+  - name: stg_geolocation
+    description: "Staging model for geolocation information."
+
+  - name: stg_order_items
+    description: "Staging model for order item information."
+
+  - name: stg_order_payments
+    description: "Staging model for payment information."
+
+  - name: stg_order_reviews
+    description: "Staging model for customer reviews."
+
+  - name: stg_orders
+    description: "Staging model for order information."
+
+    columns:
+      - name: order_id
+        description: "Unique identifier for each order."
+        tests:
+          - not_null
+          - unique
+
+      - name: customer_id
+        description: "Customer that placed the order."
+        tests:
+          - not_null
+
+  - name: stg_products
+    description: "Staging model for product information."
+
+    columns:
+      - name: product_id
+        description: "Unique identifier for each product."
+        tests:
+          - not_null
+          - unique
+
+  - name: stg_sellers
+    description: "Staging model for seller information."
+
+    columns:
+      - name: seller_id
+        description: "Unique identifier for each seller."
+        tests:
+          - not_null
+          - unique

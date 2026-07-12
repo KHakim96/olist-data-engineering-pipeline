@@ -116,3 +116,7 @@ dist/
 airflow.cfg
 airflow-webserver.pid
 webserver_config.py
+
+# dbt
+dbt_olist/target/
+dbt_olist/logs/

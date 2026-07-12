@@ -75,8 +75,6 @@ def load_parquet(conn, table_name):
         FROM read_parquet('{parquet_file}')
     """)
 
-    print(f"SUCCESS - {table_name}")
-
 
 # ==========================================================
 # Count Rows
@@ -91,6 +89,47 @@ def count_rows(conn, table_name):
     result = conn.execute(f"SELECT COUNT(*) FROM {table_name}").fetchone()
 
     return result[0]
+
+
+# ==========================================================
+# Generate Markdown Report
+# ==========================================================
+
+from datetime import datetime
+
+
+def generate_report():
+    """
+    Generate a Markdown report for the DuckDB warehouse.
+    """
+
+    DOCS_DIR.mkdir(parents=True, exist_ok=True)
+
+    report = []
+
+    report.append("# DuckDB Warehouse Report\n")
+
+    report.append(
+        f"**Generated:** " f"{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n"
+    )
+
+    report.append(f"**Tables Loaded:** {len(LOADED_TABLES)}\n")
+
+    report.append(f"**Total Rows:** {TOTAL_ROWS:,}\n\n")
+
+    report.append("| Table | Rows |")
+    report.append("|------|------:|")
+
+    for table, rows in LOADED_TABLES:
+
+        report.append(f"| {table} | {rows:,} |")
+
+    report.append("")
+    report.append(f"**Database File:** `{DATABASE_FILE.name}`")
+
+    REPORT_FILE.write_text("\n".join(report), encoding="utf-8")
+
+    print(f"\nReport saved to:\n{REPORT_FILE}")
 
 
 # ==========================================================
@@ -131,6 +170,8 @@ def main():
         print(f"SUCCESS - {rows:,} rows")
 
     conn.close()
+
+    generate_report()
 
     print("\n")
     print("=" * 60)
