@@ -50,3 +50,9 @@ kagglehub
 # ==========================================
 
 tabulate
+
+streamlit
+
+plotly
+streamlit-option-menu
+streamlit-extras

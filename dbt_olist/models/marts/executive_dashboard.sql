@@ -2,7 +2,7 @@ SELECT
 
     COUNT(DISTINCT fo.order_id) AS total_orders,
 
-    COUNT(DISTINCT dc.customer_id) AS total_customers,
+    COUNT(DISTINCT dc.customer_unique_id) AS total_customers,
 
     SUM(fp.total_payment) AS total_revenue,
 

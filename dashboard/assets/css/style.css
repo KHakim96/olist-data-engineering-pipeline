@@ -1,0 +1,199 @@
+/* ==========================================================
+   OLIST ENTERPRISE UI
+========================================================== */
+
+:root{
+
+--bg:#F6F8FC;
+
+--card:#FFFFFF;
+
+--border:#E5E7EB;
+
+--text:#111827;
+
+--muted:#6B7280;
+
+--primary:#2563EB;
+
+--green:#10B981;
+
+}
+
+/* ==========================================================
+BODY
+========================================================== */
+
+.stApp{
+
+background:var(--bg);
+
+color:var(--text);
+
+}
+
+/* ==========================================================
+MAIN
+========================================================== */
+
+.block-container{
+
+max-width:1600px;
+
+padding-top:30px;
+
+padding-left:45px;
+
+padding-right:45px;
+
+padding-bottom:50px;
+
+}
+
+/* ==========================================================
+SIDEBAR
+========================================================== */
+
+section[data-testid="stSidebar"]{
+
+background:white;
+
+border-right:1px solid var(--border);
+
+}
+
+/* ==========================================================
+HEADINGS
+========================================================== */
+
+h1{
+
+font-size:46px;
+
+font-weight:800;
+
+color:var(--text);
+
+}
+
+h2{
+
+font-size:30px;
+
+font-weight:700;
+
+color:var(--text);
+
+}
+
+h3{
+
+font-size:24px;
+
+font-weight:700;
+
+}
+
+/* ==========================================================
+CARDS
+========================================================== */
+
+.dashboard-card{
+
+background:var(--card);
+
+border:1px solid var(--border);
+
+border-radius:22px;
+
+padding:24px;
+
+box-shadow:0 8px 25px rgba(0,0,0,.06);
+
+}
+
+/* ==========================================================
+METRIC
+========================================================== */
+
+.metric-title{
+
+font-size:15px;
+
+color:var(--muted);
+
+}
+
+.metric-value{
+
+font-size:40px;
+
+font-weight:800;
+
+margin-top:15px;
+
+white-space:nowrap;
+
+}
+
+.metric-delta{
+
+margin-top:12px;
+
+color:var(--green);
+
+font-weight:700;
+
+}
+
+/* ==========================================================
+CHART
+========================================================== */
+
+.chart-card{
+
+background:white;
+
+border-radius:22px;
+
+padding:20px;
+
+border:1px solid var(--border);
+
+box-shadow:0 8px 25px rgba(0,0,0,.05);
+
+}
+
+/* ==========================================================
+PIPELINE
+========================================================== */
+
+.pipeline-card{
+
+background:white;
+
+border-radius:22px;
+
+padding:20px;
+
+border:1px solid var(--border);
+
+box-shadow:0 8px 25px rgba(0,0,0,.05);
+
+}
+
+/* ==========================================================
+HIDE
+========================================================== */
+
+#MainMenu{
+
+visibility:hidden;
+
+}
+
+footer{
+
+visibility:hidden;
+
+}
