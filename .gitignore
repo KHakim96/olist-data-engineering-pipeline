@@ -54,7 +54,9 @@ logs/
 # ==================================================
 
 data/processed/
-warehouse/
+
+warehouse/*
+!warehouse/olist.duckdb
 
 # ==================================================
 # dbt

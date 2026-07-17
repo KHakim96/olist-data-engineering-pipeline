@@ -145,9 +145,13 @@ TOTAL_ROWS = 0
 # ==========================================================
 
 
-def main():
+# def main():
+def build_duckdb():
 
-    global TOTAL_ROWS
+    global TOTAL_ROWS, LOADED_TABLES
+
+    TOTAL_ROWS = 0
+    LOADED_TABLES = []
 
     print("\n" + "=" * 60)
     print("OLIST DUCKDB DATA WAREHOUSE")
@@ -189,5 +193,8 @@ def main():
     print("=" * 60)
 
 
+# if __name__ == "__main__":
+#     main()
+
 if __name__ == "__main__":
-    main()
+    build_duckdb()
