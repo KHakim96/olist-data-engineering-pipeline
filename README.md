@@ -377,7 +377,7 @@ The Streamlit application contains seven interactive business dashboards.
 
 The interactive Streamlit application can be accessed here:
 
-> **Coming Soon**
+> **https://olist-data-engineering-pipeline-fqcblfcmcru3uypqfm5hd3.streamlit.app**
 
 The deployed application includes:
 
