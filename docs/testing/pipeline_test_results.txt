@@ -1,0 +1,17 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.10.13, pytest-9.1.1, pluggy-1.6.0 -- /Users/luqman/.pyenv/versions/3.10.13/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/luqman/olist-data-engineering-pipeline
+collecting ... collected 9 items
+
+tests/test_pipeline.py::test_total_orders PASSED                         [ 11%]
+tests/test_pipeline.py::test_total_customers PASSED                      [ 22%]
+tests/test_pipeline.py::test_total_products PASSED                       [ 33%]
+tests/test_pipeline.py::test_total_sellers PASSED                        [ 44%]
+tests/test_pipeline.py::test_total_revenue PASSED                        [ 55%]
+tests/test_pipeline.py::test_review_score_range PASSED                   [ 66%]
+tests/test_pipeline.py::test_duplicate_orders PASSED                     [ 77%]
+tests/test_pipeline.py::test_orphan_customers PASSED                     [ 88%]
+tests/test_pipeline.py::test_null_order_ids PASSED                       [100%]
+
+============================== 9 passed in 0.08s ===============================

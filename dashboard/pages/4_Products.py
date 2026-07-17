@@ -56,24 +56,24 @@ with c1:
 
     st.metric(
         label="📦 Products",
-        value=f"{row.total_products:,}",
-        delta="Current",
+        value=f"{int(row.total_products):,}",
+        # delta="Current",
     )
 
 with c2:
 
     st.metric(
         label="💰 Avg Price",
-        value=f"RM {row.avg_price:.0f}",
-        delta="Current",
+        value=f"$ {row.avg_price:.0f}",
+        # delta="Current",
     )
 
 with c3:
 
     st.metric(
         label="🚚 Avg Freight",
-        value=f"RM {row.avg_freight:.0f}",
-        delta="Current",
+        value=f"$ {row.avg_freight:.0f}",
+        # delta="Current",
     )
 
 with c4:
@@ -81,7 +81,7 @@ with c4:
     st.metric(
         label="🏆 Categories",
         value=f"{int(row.total_categories)}",
-        delta="Current",
+        # delta="Current",
     )
 
 st.write("")
@@ -141,7 +141,7 @@ fig_category.update_layout(
         t=10,
         b=10,
     ),
-    xaxis_title="Revenue (RM)",
+    xaxis_title="Revenue ($)",
     yaxis_title="",
     yaxis=dict(
         categoryorder="total ascending",
@@ -197,7 +197,7 @@ fig_price = px.bar(
 )
 
 fig_price.update_traces(
-    texttemplate="RM %{x:.0f}",
+    texttemplate="$ %{x:.0f}",
     textposition="outside",
     cliponaxis=False,
     marker_color="#10B981",
@@ -209,7 +209,7 @@ fig_price.update_layout(
     plot_bgcolor="#0E1117",
     font=dict(color="white"),
     margin=dict(l=10, r=50, t=10, b=10),
-    xaxis_title="Average Price (RM)",
+    xaxis_title="Average Price ($)",
     yaxis_title="",
     yaxis=dict(categoryorder="total ascending"),
 )
@@ -261,7 +261,7 @@ fig_freight = px.bar(
 )
 
 fig_freight.update_traces(
-    texttemplate="RM %{x:.0f}",
+    texttemplate="$ %{x:.0f}",
     textposition="outside",
     cliponaxis=False,
     marker_color="#F59E0B",
@@ -273,7 +273,7 @@ fig_freight.update_layout(
     plot_bgcolor="#0E1117",
     font=dict(color="white"),
     margin=dict(l=10, r=50, t=10, b=10),
-    xaxis_title="Average Freight (RM)",
+    xaxis_title="Average Freight ($)",
     yaxis_title="",
     yaxis=dict(categoryorder="total ascending"),
 )
@@ -329,7 +329,7 @@ fig_price_dist.update_layout(
         t=10,
         b=10,
     ),
-    xaxis_title="Product Price (RM)",
+    xaxis_title="Product Price ($)",
     yaxis_title="Frequency",
 )
 with left:

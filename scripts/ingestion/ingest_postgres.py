@@ -13,7 +13,8 @@ from dotenv import load_dotenv
 
 from psycopg2.extras import execute_values
 
-from datasets import DATASETS
+# from datasets import DATASETS
+from scripts.ingestion.datasets import DATASETS
 
 # ==========================================================
 # Load Environment Variables
@@ -157,6 +158,39 @@ def insert_dataframe(conn, table_name, df):
 
 
 # ==========================================================
+# Clear Existing Tables
+# ==========================================================
+
+
+def truncate_tables(conn):
+    """
+    Remove existing data before batch ingestion.
+    """
+
+    cursor = conn.cursor()
+
+    cursor.execute("""
+        TRUNCATE TABLE
+            order_reviews,
+            order_payments,
+            order_items,
+            orders,
+            products,
+            sellers,
+            customers,
+            geolocation,
+            category_translation
+        RESTART IDENTITY CASCADE;
+    """)
+
+    conn.commit()
+
+    cursor.close()
+
+    print("Existing data cleared.")
+
+
+# ==========================================================
 # Main Pipeline
 # ==========================================================
 
@@ -169,6 +203,8 @@ def main():
     print("=" * 60)
 
     conn = get_connection()
+
+    truncate_tables(conn)
 
     for dataset in DATASETS:
         table = dataset["table"]

@@ -50,7 +50,7 @@ c1, c2, c3, c4 = st.columns(4)
 with c1:
     st.metric(
         label="💰 Revenue",
-        value=f"RM {row.revenue/1_000_000:.1f}M",
+        value=f"$ {row.revenue/1_000_000:.1f}M",
         delta="Current",
     )
 
@@ -64,7 +64,7 @@ with c2:
 with c3:
     st.metric(
         label="🛒 Average Order",
-        value=f"RM {row.avg_order:.0f}",
+        value=f"$ {row.avg_order:.0f}",
         delta="Current",
     )
 
@@ -108,7 +108,7 @@ fig_month = px.line(
 
 fig_month.update_traces(line=dict(width=4))
 
-fig_month.update_layout(height=420, xaxis_title="", yaxis_title="Revenue (RM)")
+fig_month.update_layout(height=420, xaxis_title="", yaxis_title="Revenue ($)")
 
 fig_month.update_xaxes(tickangle=-45)
 
@@ -173,7 +173,7 @@ fig_category.update_layout(
     paper_bgcolor="#0E1117",
     plot_bgcolor="#0E1117",
     font=dict(color="white"),
-    xaxis_title="Revenue (RM)",
+    xaxis_title="Revenue ($)",
     yaxis_title="",
     yaxis=dict(categoryorder="total ascending"),
 )
@@ -279,7 +279,7 @@ fig_daily.update_layout(
         b=10,
     ),
     xaxis_title="",
-    yaxis_title="Revenue (RM)",
+    yaxis_title="Revenue ($)",
 )
 
 with st.container(border=True):
@@ -335,7 +335,7 @@ fig_state.update_layout(
     font=dict(color="white"),
     margin=dict(l=10, r=20, t=10, b=10),
     xaxis_title="",
-    yaxis_title="Revenue (RM)",
+    yaxis_title="Revenue ($)",
     yaxis=dict(tickformat=".2s"),
 )
 

@@ -1,0 +1,13 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.10.13, pytest-9.1.1, pluggy-1.6.0 -- /Users/luqman/.pyenv/versions/3.10.13/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/luqman/olist-data-engineering-pipeline
+collecting ... collected 5 items
+
+tests/test_export_parquet.py::test_parquet_directory_exists PASSED       [ 20%]
+tests/test_export_parquet.py::test_all_parquet_files_exist PASSED        [ 40%]
+tests/test_export_parquet.py::test_parquet_files_are_readable PASSED     [ 60%]
+tests/test_export_parquet.py::test_parquet_files_not_empty PASSED        [ 80%]
+tests/test_export_parquet.py::test_row_counts_match_raw PASSED           [100%]
+
+============================== 5 passed in 2.67s ===============================

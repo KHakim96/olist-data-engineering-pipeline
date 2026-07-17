@@ -1,10 +1,10 @@
 # DuckDB Warehouse Report
 
-**Generated:** 2026-07-13 18:11:42
+**Generated:** 2026-07-17 01:49:43
 
 **Tables Loaded:** 9
 
-**Total Rows:** 2,551,861
+**Total Rows:** 1,551,698
 
 
 | Table | Rows |
@@ -13,7 +13,7 @@
 | customers | 99,441 |
 | sellers | 3,095 |
 | products | 32,951 |
-| geolocation | 2,000,326 |
+| geolocation | 1,000,163 |
 | orders | 99,441 |
 | order_items | 112,650 |
 | order_payments | 103,886 |

@@ -1,10 +1,10 @@
 # Parquet Export Report
 
-**Generated:** 2026-07-13 18:07:08
+**Generated:** 2026-07-17 01:49:35
 
 **Tables Exported:** 9
 
-**Total Rows:** 2,551,861
+**Total Rows:** 1,551,698
 
 
 | Table | Rows | Columns | Size (MB) | File |
@@ -13,7 +13,7 @@
 | customers | 99,441 | 5 | 6.76 | customers.parquet |
 | sellers | 3,095 | 4 | 0.13 | sellers.parquet |
 | products | 32,951 | 9 | 1.36 | products.parquet |
-| geolocation | 2,000,326 | 5 | 33.00 | geolocation.parquet |
+| geolocation | 1,000,163 | 5 | 16.54 | geolocation.parquet |
 | orders | 99,441 | 8 | 10.02 | orders.parquet |
 | order_items | 112,650 | 7 | 6.21 | order_items.parquet |
 | order_payments | 103,886 | 5 | 3.69 | order_payments.parquet |

@@ -1,0 +1,14 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.10.13, pytest-9.1.1, pluggy-1.6.0 -- /Users/luqman/.pyenv/versions/3.10.13/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/luqman/olist-data-engineering-pipeline
+collecting ... collected 6 items
+
+tests/test_load_duckdb.py::test_duckdb_exists PASSED                     [ 16%]
+tests/test_load_duckdb.py::test_required_tables_exist PASSED             [ 33%]
+tests/test_load_duckdb.py::test_fact_tables_not_empty PASSED             [ 50%]
+tests/test_load_duckdb.py::test_dimension_tables_not_empty PASSED        [ 66%]
+tests/test_load_duckdb.py::test_executive_dashboard_exists PASSED        [ 83%]
+tests/test_load_duckdb.py::test_total_revenue_positive PASSED            [100%]
+
+============================== 6 passed in 0.06s ===============================

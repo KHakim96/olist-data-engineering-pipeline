@@ -120,3 +120,16 @@ webserver_config.py
 # dbt
 dbt_olist/target/
 dbt_olist/logs/
+
+airflow-webserver.pid
+gunicorn.ctl
+
+logs/
+
+dbt_olist/logs/
+
+dbt_olist/target/
+
+__pycache__/
+
+.pytest_cache/

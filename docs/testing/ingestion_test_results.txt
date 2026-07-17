@@ -1,0 +1,16 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.10.13, pytest-9.1.1, pluggy-1.6.0 -- /Users/luqman/.pyenv/versions/3.10.13/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/luqman/olist-data-engineering-pipeline
+collecting ... collected 8 items
+
+tests/test_ingestion.py::test_dataset_configuration PASSED               [ 12%]
+tests/test_ingestion.py::test_raw_data_directory_exists PASSED           [ 25%]
+tests/test_ingestion.py::test_all_dataset_files_exist PASSED             [ 37%]
+tests/test_ingestion.py::test_load_csv_returns_dataframe PASSED          [ 50%]
+tests/test_ingestion.py::test_loaded_dataframe_not_empty PASSED          [ 62%]
+tests/test_ingestion.py::test_orders_contains_order_id PASSED            [ 75%]
+tests/test_ingestion.py::test_customers_contains_customer_id PASSED      [ 87%]
+tests/test_ingestion.py::test_review_score_range PASSED                  [100%]
+
+============================== 8 passed in 2.03s ===============================

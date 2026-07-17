@@ -60,7 +60,7 @@ fig_revenue.update_layout(
     height=420,
     margin=dict(l=10, r=10, t=20, b=10),
     xaxis_title="",
-    yaxis_title="Revenue (RM)",
+    yaxis_title="Revenue ($)",
 )
 
 # ==========================================================
@@ -81,7 +81,7 @@ c1, c2, c3, c4 = st.columns(4)
 with c1:
     st.metric(
         label="💰 Revenue",
-        value=f"RM {row.total_revenue/1_000_000:.1f}M",
+        value=f"$ {row.total_revenue/1_000_000:.1f}M",
         delta="Current",
     )
 
@@ -102,7 +102,7 @@ with c3:
 with c4:
     st.metric(
         label="🛒 Avg Order",
-        value=f"RM {row.average_order_value:.0f}",
+        value=f"$ {row.average_order_value:.0f}",
         delta="Current",
     )
 
@@ -261,7 +261,7 @@ fig_category.update_layout(
     paper_bgcolor="#0E1117",
     plot_bgcolor="#0E1117",
     font=dict(color="white"),
-    xaxis_title="Revenue (RM)",
+    xaxis_title="Revenue ($)",
     yaxis_title="",
     yaxis=dict(categoryorder="total ascending"),
 )
